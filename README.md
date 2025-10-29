@@ -86,15 +86,20 @@ The goal of this project is to create a secure communication platform that:
 ## 🏗️ Project Structure
 
 secure-chat-app/
-│
-├── server.py # Flask-SocketIO server
-├── client.py # Python client (E2EE terminal chat)
-├── crypto_utils.py # RSA & AES encryption utilities
-├── encrypted_logs.jsonl # Optional encrypted logs stored by server
-├── End-to-End_Encrypted_Messaging_App_Report_Aashutosh_Rana.pdf
-└── README.md # Documentation file
 
-text
+│
+
+├── server.py # Flask-SocketIO server
+
+├── client.py # Python client (E2EE terminal chat)
+
+├── crypto_utils.py # RSA & AES encryption utilities
+
+├── encrypted_logs.jsonl # Optional encrypted logs stored by server
+
+├── End-to-End_Encrypted_Messaging_App_Report_Aashutosh_Rana.pdf
+
+└── README.md # Documentation file
 
 ---
 
@@ -103,39 +108,29 @@ text
 ### 1️⃣ Install Dependencies
 pip install flask flask-socketio python-socketio eventlet websocket-client cryptography
 
-text
 
 ### 2️⃣ Start the Server
 python server.py
-
-text
 You should see:
 
 Server initialized for eventlet
 Running on http://127.0.0.1:5000
-
-text
 
 ### 3️⃣ Run Clients
 Open two separate terminals and run:
 python client.py alice
 python client.py bob
 
-text
 Both users will connect to the same server and exchange public keys automatically.
 
 ### 4️⃣ Send Encrypted Messages
 From Alice’s terminal:
 msg bob Hello Bob!
 
-text
 On Bob’s terminal:
 From alice: Hello Bob!
 ✅ Message successfully sent, encrypted, and decrypted.
 
-text
-
----
 
 ## 🧰 Example of Encrypted Log Entry
 
@@ -148,8 +143,6 @@ Sample from `encrypted_logs.jsonl`:
 "nonce": "BASE64ENCODED_NONCE",
 "ciphertext": "BASE64ENCODED_MESSAGE"
 }
-
-text
 
 The server cannot decrypt this message.
 
