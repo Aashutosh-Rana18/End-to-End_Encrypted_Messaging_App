@@ -114,7 +114,6 @@ python server.py
 You should see:
 
 Server initialized for eventlet
-Running on http://127.0.0.1:5000
 
 ### 3️⃣ Run Clients
 Open two separate terminals and run:
